@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block main %}
+    <section>  
+        <div class="container">
+            <h3>Checkout</h3>
+            <p>Thank you for your interest. Please provide your details so that we can ship you your package safely. Thank you! </p>
+          <hr>
+          <form action="" method="post" class="form" role="form">
+            {{ form.csrf_token() }}
+           <d1>
+            {{ wtf.form_field(form.firstname, class='form-control', placeholder='Your first name') }}
+            {{ wtf.form_field(form.surname, class='form-control', placeholder='Your surname') }}
+            {{ wtf.form_field(form.email, class='form-control', placeholder='your@email.com') }}
+            {{ wtf.form_field(form.phone, class='form-control', placeholder='Your phone number') }}
+            {{ wtf.form_field(form.cardnumber, class='form-control', placeholder='Credit card number') }}
+            {{ wtf.form_field(form.expirydate, class='form-control', placeholder='Expiry date') }}
+            {{ wtf.form_field(form.csc, class='form-control', placeholder='CSC number') }}
+           </d1>
+           <p><input type=submit class='btn btn-warning btn-block'>
+          </form>
+          <hr>
+          <p></a></p>
+          </div>
+          
+    </section>
+
+
+    
+{% endblock %}

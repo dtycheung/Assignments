@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block main %}
+
+
+ <div class="container"  style="background-color: #54ba98;">
+    <div class="row text-center ">
+        <div class="col">
+            
+            <h1 class="neon pt-3" style="font-size: 55px;   font-family: 'Courgette', cursive;">{% for catefortitle in catefortitle%}{{catefortitle.name}}{% endfor %} Movie List</h1>
+        </div>
+    </div>
+
+    <div class="justify-content-center row">
+        <div class="col-lg-11">
+            {% for Movie in movies %} 
+            <div class="row 3 mb-4 text-light " style="background-color:rgb(5, 17, 48); ">
+                
+                <div class="col-sm-3 mt-3 "><img class="img-fluid img-responsive rounded " src="{{url_for('static',filename='image/'+Movie.mov_image)}}" style="box-shadow: 7px 7px 10px #000024e8;"></div>
+                <div class="col-sm-7 mt-3" style=" font-family: 'Titillium Web'">
+                    <u><h3>{{Movie.name}}</h3></u>
+                    <div class="row" >  
+                        <div class="col-sm-3 pt-3">Director:</div><div class="col-sm-9 pt-3">{{Movie.director}}<br></div>
+                        <div class="col-sm-3 pt-3">Starring with: </div><div class="col-sm-9 pt-3">{{Movie.stars}}<br></div>
+                        <div class="col-sm-3 pt-3">Format: </div><div class="col-sm-9 pt-3">Blu-ray<br></div>
+                        <div class="col-sm-3 pt-3">Storyline: </div><div class="col-sm-9 pt-3"><p class="charlimit "> {% for art in articles if art.movie_id == Movie.id %}{{art.content}} {% endfor %}<br></p></div>
+                    </div>        
+                </div>
+
+                <div class="col-sm-2 align-items-center align-content-center border-left mt-1 border-warning">
+                    <div class="d-flex flex-row align-items-center">
+                        <h5 class="mr-1">AUD {{ "$%.2f"|format(Movie.price) }}</h5>
+                    </div>
+                    <h6 class="freeshipping pt-3">Free shipping</h6>
+                    <h6 class=" pt-3">Quantity: <span> &nbsp; 1</span><br></h6>
+                    <form action="{{ url_for('main.order') }}">
+                        <input type="hidden" id="movie_id" name="movie_id" value="{{ Movie.id }}">
+                        <input class="btn btn-warning mt-3" type="submit" value="Add to Cart">
+                    </form>   
+                    
+                    <form action="{{url_for('main.moviedetail', movid = Movie.id)}}">
+                        <input type="hidden" id="Movie_id" name="Movie_id" value="{{ Movie.id }}">
+                        <input class="btn btn-primary mt-3 " type="submit" value="More Details">
+                    </form>
+
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+
+ {% endblock %}

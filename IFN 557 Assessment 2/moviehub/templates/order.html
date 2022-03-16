@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<!-- display contents of user basket --> 
+    <div class="container"  style="background-color:  #54ba98;">
+
+        <div class="rowmb-2 ml-2 pb-3 neon" style="font-size: 55px; font-family: 'Courgette', cursive;">
+            Shopping Cart <i class="fa fa-shopping-cart" style="padding: 15px;"></i>
+        </div>
+        <!-- each movie on seperate row -->
+        <div class="row justify-content-center ">
+            {% for Movie in order.movies %} 
+            <div class="col-lg-11 pt-2">
+                
+                <div class="row p-3 mb-1 text-light " style="  background-color: rgb(5, 17, 48);">
+                
+                    <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded " src="{{url_for('static',filename='image/'+Movie.mov_image)}}" style="box-shadow: 7px 7px 10px #202036e8;"></div>
+                    <div class="col-md-7 mt-1">
+                        <u><h3>{{Movie.name}}</h3></u>
+                        <div class="row" >  
+                            <div class="col-sm-3 pt-3">Director:</div><div class="col-sm-9 pt-3">{{Movie.director}}<br></div>
+                            <div class="col-sm-3 pt-3">Starring with: </div><div class="col-sm-9 pt-3">{{Movie.stars}}<br></div>
+                            <div class="col-sm-3 pt-3">Format: </div><div class="col-sm-9 pt-3">Blu-ray<br></div>
+                            <div class="col-sm-3 pt-3">Quantity: <br></div><div class="col-sm-9 pt-3">1</div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-2 align-items-center align-content-center border-left pt-3 border-warning">
+                        <div class="d-flex flex-row align-items-center pt-3">
+                            <h5 class="mr-1">AUD{{ "$%.2f"|format(Movie.price) }}</h5>
+                        </div>
+                        <h6 class="freeshipping pt-3">Free shipping</h6>
+                        
+                        <form class="pt-3" method="POST" action="{{url_for('main.deleteorderitem')}}">
+                            <input type="hidden" id="id" name="id" value="{{Movie.id}}">
+                            <input type="submit" value="Remove" class="btn btn-danger mb-1">
+                        </form> 
+    
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+        
+        <!-- total price and page controls -->
+        <section class="pl-4">
+            <div class="row co-12 d-flex">
+                <h4 class="mt-2 ml-3 text-white">Total price : {{ "$%.2f"|format(totalprice) }}</h4>
+            </div>
+        
+            <div class="row co-12 d-flex mt-2 ml-2">
+                <a href="{{ url_for('main.movielist', _anchor='movies_anchor') }}" class="btn btn-outline-light mr-4">Back to menu</a>
+                <a href="{{ url_for('main.checkout') }}" class="btn btn-warning mr-4">Checkout</a>
+                <a href="{{ url_for('main.deleteorder') }}" class="btn btn-danger">Empty Cart</a>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block main %}
+     <!--End of Nav-->
+{% for mov in movies%}
+<div class="container" style="background-color: rgb(5, 17, 48);">
+<div class="row pt-3 movbanner" style="background-image:url(/static/image/banner/{{mov.banner}});">
+  <div class="col-md-4 pl-2"><img class="productionshot rounded" src="{{url_for('static',filename='image/'+mov.mov_image)}}" ></div>
+<div class="col-xl-8" style="height: 400px;" >
+  
+    <div class=" display-4 pr-4 fancyshadow g8title" ><br><br><br>{{mov.name}}</div></div>
+    
+</div>
+
+<!--collapse <div class="row  text-white coolneon pl-5 pt-1" style="background-color: rgba(0, 255, 157, 0.85);">Overview</div> -->
+
+<div class="accordion" id="movie_{{mov.id}}" >
+  <div class="card" >
+    <div class="card-header collapseheader" id="headingm{{mov.id}}" >
+      <h5 class="mb-0">
+        <button class="btn btn-link coolneon " type="button" data-toggle="collapse" data-target="#collapsem{{mov.id}}" aria-expanded="true" aria-controls="collapsem{{mov.id}}">
+          Overview
+        </button>
+      </h5>
+    </div>
+    <div id="collapsem{{mov.id}}" class="collapse show" aria-labelledby="heading{{mov.id}}" data-parent="#movie_{{mov.id}}">
+      <div class="card-body ">
+        <div class="row">
+
+        <div class="col-md-9 mt-1" style="font-weight: bold;">
+          <h3>{{mov.name}}</h3>    
+          <div class="row" >  
+          <div class="col-sm-3 pt-3">Director:</div><div class="col-sm-9 pt-3">{{mov.director}}<br></div>
+          <div class="col-sm-3 pt-3" >Starting with: </div><div class="col-sm-9 pt-3">{{mov.stars}}<br></div>
+          <div class="col-sm-3 pt-3">Format: </div><div class="col-sm-9 pt-3">Blu-ray<br></div>
+          
+
+        </div>
+        </div>
+
+      <div class="col-md-3 align-items-center align-content-center border-left mt-1 border-warning">
+          <div class="d-flex flex-row align-items-center">
+              <h5 class="mr-1 pt-3">AUD {{ "$%.2f"|format(mov.price) }}</h5>
+          </div>
+          <h5 class="pt-3" style="color: rgb(0, 172, 106); text-shadow: 2px 0 5px #e0e0e0; font-family: 'Courgette', cursive;">Free shipping</h5>
+          <h5 class=" pt-3 mr-1">Quantity: <span> &nbsp; 1</span><br></h5>
+          <form action="{{ url_for('main.order') }}">
+              <input type="hidden" id="movie_id" name="movie_id" value="{{ mov.id }}">
+              <input class="btn btn-warning btn-xl mt-3 " type="submit" value="Add to Cart">
+          </form>   
+      </div>
+    </div>
+
+      </div>
+    </div>
+  </div>
+
+<!--collapse <div class="row  text-white coolneon pl-5 pt-1" style="background-color: rgba(0, 255, 157, 0.85);">Overview</div> -->
+
+{% for art in articles if art.movie_id == mov.id %}
+<div class="accordion" id="article_{{art.id}}" >
+  <div class="card" >
+    <div class="card-header collapseheader" id="heading{{art.id}}">
+      <h5 class="mb-0">
+          <button class="btn btn-link coolneon " type="button" data-toggle="collapse" data-target="#collapse{{art.id}}" aria-expanded="true" aria-controls="collapse{{art.id}}">
+          {{art.artType}} 
+        </button>
+      </h5>
+    </div>
+    <div id="collapse{{art.id}}" class="collapse show" aria-labelledby="heading{{art.id}}" data-parent="#article_{{art.id}}">
+      <div class="card-body ">
+        {{art.content}}
+      </div>
+    </div>
+  </div>
+</div>
+  {% endfor %}
+  
+  <div class="accordion" id="trailer_{{ mov.trailer }}" >
+    <div class="card" >
+      <div class="card-header collapseheader" id="heading{{ mov.trailer }}" >
+        <h5 class="mb-0">
+          <button class="btn btn-link coolneon " type="button" data-toggle="collapse" data-target="#collapse{{ mov.trailer }}" aria-expanded="true" aria-controls="collapse{{ mov.trailer }}">
+            Trailer
+          </button>
+        </h5>
+      </div>
+      <div id="collapse{{ mov.trailer }}" class="collapse show" aria-labelledby="heading{{ mov.trailer }}" data-parent="#trailer_{{ mov.trailer }}">
+        <div class="card-body text-center">
+                <iframe width="960" height="540" src="https://www.youtube-nocookie.com/embed/{{ mov.trailer }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endfor %}
+
+
+{% endblock %}
