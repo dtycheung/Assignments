@@ -1,0 +1,26 @@
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\bin\Debug\netcoreapp3.1\ifn563_boardgame.exe
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\bin\Debug\netcoreapp3.1\ifn563_boardgame.deps.json
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\bin\Debug\netcoreapp3.1\ifn563_boardgame.runtimeconfig.json
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\bin\Debug\netcoreapp3.1\ifn563_boardgame.runtimeconfig.dev.json
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\bin\Debug\netcoreapp3.1\ifn563_boardgame.dll
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\bin\Debug\netcoreapp3.1\ifn563_boardgame.pdb
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\obj\Debug\netcoreapp3.1\ifn563_boardgame.csprojAssemblyReference.cache
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\obj\Debug\netcoreapp3.1\ifn563_boardgame.AssemblyInfoInputs.cache
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\obj\Debug\netcoreapp3.1\ifn563_boardgame.AssemblyInfo.cs
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\obj\Debug\netcoreapp3.1\ifn563_boardgame.csproj.CoreCompileInputs.cache
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\obj\Debug\netcoreapp3.1\ifn563_boardgame.dll
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\obj\Debug\netcoreapp3.1\ifn563_boardgame.pdb
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame\obj\Debug\netcoreapp3.1\ifn563_boardgame.genruntimeconfig.cache
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\bin\Debug\netcoreapp3.1\ifn563_boardgame.exe
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\bin\Debug\netcoreapp3.1\ifn563_boardgame.deps.json
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\bin\Debug\netcoreapp3.1\ifn563_boardgame.runtimeconfig.json
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\bin\Debug\netcoreapp3.1\ifn563_boardgame.runtimeconfig.dev.json
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\bin\Debug\netcoreapp3.1\ifn563_boardgame.dll
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\bin\Debug\netcoreapp3.1\ifn563_boardgame.pdb
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\obj\Debug\netcoreapp3.1\ifn563_boardgame.csprojAssemblyReference.cache
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\obj\Debug\netcoreapp3.1\ifn563_boardgame.AssemblyInfoInputs.cache
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\obj\Debug\netcoreapp3.1\ifn563_boardgame.AssemblyInfo.cs
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\obj\Debug\netcoreapp3.1\ifn563_boardgame.csproj.CoreCompileInputs.cache
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\obj\Debug\netcoreapp3.1\ifn563_boardgame.dll
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\obj\Debug\netcoreapp3.1\ifn563_boardgame.pdb
+C:\Users\Tak Yu Cheung\source\repos\ifn563_boardgame\ifn563_boardgame everything look fine again\obj\Debug\netcoreapp3.1\ifn563_boardgame.genruntimeconfig.cache
